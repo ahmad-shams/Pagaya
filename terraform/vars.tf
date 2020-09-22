@@ -34,3 +34,11 @@ variable "AMIS" {
 variable "INSTANCE_USERNAME" {
   default = "ubuntu"
 }
+
+variable "WEB_INSTANCE_AMI" {
+  default = "ami-0653e888ec96eab9b"
+}
+
+variable "API_INSTANCE_AMI" {
+  default = "ami-0653e888ec96eab9b"
+}
