@@ -24,4 +24,10 @@ jobs:
       script:
       - cd $TRAVIS_BUILD_DIR
       - ./build_docker.sh web
+    - stage: "Terraform"
+      script:
+      - cd $TRAVIS_BUILD_DIR/terraform
+      - terraform init
+      - terraform terraform plan -out vpc.tfplan
+      - terraform apply vpc.tfplan
    
