@@ -1,6 +1,14 @@
+
+global:
+  - PATH=$HOME/.local/bin:$PATH
+    
 services:
   - docker  
 
+before_install:
+  - pyenv global 3.7.1
+  - pip install -U pip
+  - pip install awscli
   
 jobs:
   include:
