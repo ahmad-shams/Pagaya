@@ -1,0 +1,15 @@
+services:
+  - docker  
+
+  
+jobs:
+  include:
+    - stage: "Build api"
+      script:
+      - cd $TRAVIS_BUILD_DIR
+      - ./build_docker.sh api
+    - stage: "Build web"
+      script:
+      - cd $TRAVIS_BUILD_DIR
+      - ./build_docker.sh web
+   
